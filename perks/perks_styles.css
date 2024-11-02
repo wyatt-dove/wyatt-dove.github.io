@@ -1,0 +1,23 @@
+/*Written by Justus Smith and Wyatt Dove*/
+body {background-color: #808080; color: white;}
+
+/*style for the perk boxes*/
+.box1 {border: 5px solid black; font-style: script; background-color:lightgray; padding:10px; display:flex; align-items:center; font-weight:bold; color:black; font-size:18px;}
+.box2 {border: 5px solid black; font-style: script; background-color:lightgray; padding:5px; color:black; font-size:15px;}
+
+/*make box1 glow light blue when you hover*/
+.box1:hover{background-color:lightblue}
+
+.column-heading {margin-top:30px; width:100%;}
+.column-indicator{padding-left:5px; color:black; margin:0;}
+.divider {height:2px; margin-top:2px; color:black; background-color:black; border-color:black; margin-bottom:25px;}
+
+.desc1 {padding:5px; width:75%; align-items:left;}
+
+.icon{height:32px;
+    width:32px;}
+
+.d2header2{color:black; padding:0;}
+
+.d2header4{display: flex;
+    align-items:center;}

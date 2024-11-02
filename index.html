@@ -1,0 +1,251 @@
+<!--HTML File - home page for the project
+Written by Wyatt Dove-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="vp" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="d2icon.png">
+
+    </head>
+
+    <body>
+
+        <!--Heading-->
+        <header class="mHeader">
+            <div>
+                <h1 class="d2header1">Destiny 2: Exotic Class Item Compendium</h1>
+                <h3 class="d2header3">A Destiny 2 Companion Application</h3>
+            </div>
+        </header>
+
+        <!--Selection Cards[1]-->
+        <div class="cards">
+
+            <!--Tier List Card[1][2][3]-->
+            <article class="card">
+                <header>
+                    <img class="center" src="tierlist.png" alt="Tier List" width="64" height="64" style="padding-top:10px">
+                    <h2 style="text-align:center;">Tier List</h2>
+                </header>
+                    <div>
+                        <p class="center">Contains a ranking system for each of the 64 possible rolls for your class!</p>
+                    </div>
+                    <footer class="cardfooter"><a href="tierlist/index.html">View</a></footer>
+
+            </article>
+
+            <!--Possible Rolls Card[1][2]-->
+            <article class="card">
+                <header>
+                    <img class="center" src="rolls.png" alt="Possible Rolls" width="64" height="64" style="padding-top:10px">
+                    <h2 style="text-align:center;">Possible Rolls</h2>
+                </header>
+                    <div>
+                        <p class="center">Provides a brief overview of each roll available for your class. Also provides notes on unique interactions a roll might have!</p>
+                    </div>
+                    <footer class="cardfooter"><a href="rolls/rolls_home.html">View</a></footer>
+
+            </article>
+
+            <!--Perk Breakdown Card[1][2]-->
+            <article class="card">
+                <header>
+                    <img class="center" src="perks.png" alt="Perk Breakdown" width="64" height="64" style="padding-top:10px">
+                    <h2 style="text-align:center;">Perk Breakdown</h2>
+                </header>
+                    <div>
+                        <p class="center">Grants an in-depth breakdown of each perk and its effects, listing exact values for certain effects.</p>
+                    </div>
+                    <footer class="cardfooter"><a href="perks/index.html">View</a></footer>
+
+            </article>
+
+
+            <!--Elemental verbs card-->
+            <article class="card">
+                <header>
+                    <img class="center" src="verbs/icons/prism/icon_prism.png" alt="Elemental Verbs" width="64" height="64" style="padding-top:10px">
+                    <h2 style="text-align:center;">Elemental Verbs</h2>
+                </header>
+                    <div>
+                        <p class="center">Detailed breakdowns of each of the elemental verbs.</p>
+                    </div>
+                    <footer class="cardfooter"><a href="verbs/verbs_home.html">View</a></footer>
+
+            </article>
+        </div>
+
+        <!--Box with extra resources-->
+        <footer>
+            <div class="box">
+                <h2 style="text-align:center;">More Resources...</h2>
+                <button id="changelogBtn" class="infobutton">Changelog</button>
+                <button id="upcomingBtn" class="infobutton">Upcoming Changes</button>
+                <button id="aboutBtn" class="infobutton">About</button>
+                <button id="refBtn" class="infobutton">References</button>
+            </div>
+        </footer>
+
+        <!--"Changelog" modal popup-->
+        <!--Reference: https://www.w3schools.com/howto/howto_css_modals.asp-->
+        <div id="changelogContent" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Changelog</h3>
+                <p>Version 1.0: Added Tier List, Possible Rolls, Perk Breakdown, and Elemental Verbs sections.</p>
+            </div>
+        </div>
+
+        <!--"Upcoming changes" modal popup-->
+        <div id="upcomingContent" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Upcoming Changes</h2>
+                <h3>Modifications</h3>
+                <ul>
+                    <li>
+                        <p>Updated Perk Breakdowns and Tier List placement for Stoicism Exotic Class Items featuring Spirit of Hoarfrost, Spirit of the Horn, and Spirit of Alpha Lupi to reflect their new functionality in Episode: Revenant.</p>
+                    </li>
+                </ul>
+                <h3>Features</h3>
+                <ul>
+                    <li>
+                        <p>Elemental Verbs section, covering all the elemental buffs, debuffs, and other effects in detail.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--"About" modal popup-->
+        <div id="aboutContent" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Overview</h3>
+                <p>This is a companion application for the game Destiny 2. It aims to provide a supplement 
+                    to the user's gameplay experience while compiling information that the game struggles to
+                    present in a convenient manner.</p>
+                <h3>Developer Team</h3>
+                <ul>
+                    <li>Wyatt Dove</li>
+                    <li>Ashia Taplin</li>
+                    <li>Justin Shows</li>
+                    <li>Justus Smith</li>
+                    <li>Lyrique McNair</li>
+                    <li>Mackenzie Teeter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--"References" modal popup-->
+        <div id="refContent" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>References</h3>
+                <h4>Information</h4>
+                <p>The information provided by this web application, alongside the images used, were mostly sourced from the Destiny 2 Data Compendium spreadsheet and the light.gg database.</p>
+                <ul>
+                    <li>
+                        <p>Destiny 2 Data Compendium: https://docs.google.com/spreadsheets/d/1WaxvbLx7UoSZaBqdFr1u32F2uWVLo-CJunJB4nlGUE4/edit?gid=20898389#gid=20898389</p>
+                    </li>
+                    <li>
+                        <p>Light.gg: https://www.light.gg</p>
+                    </li>
+                    <li>
+                        Additional tests were conducted firsthand in-game when necessary to corroborate certain data points.
+                    </li>
+                </ul>
+                <br>
+                
+                <h4>Software Development</h4>
+                <p>Various references were used for developing this web application, namely w3schools for references on how to construct specific elemetns necessary for this project.</p>
+                <ul>
+                    <li>
+                        <p>w3schools: https://www.w3schools.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Script to open modals-->
+        <script>
+            //get changelog button modal
+            var modal1 = document.getElementById("changelogContent");
+            var button1 = document.getElementById("changelogBtn");
+            var span1 = document.getElementsByClassName("close")[0];
+
+            //get upcoming changes button modal
+            var modal2 = document.getElementById("upcomingContent");
+            var button2 = document.getElementById("upcomingBtn");
+            var span2 = document.getElementsByClassName("close")[1];
+
+            //get about button modal
+            var modal3 = document.getElementById("aboutContent");
+            var button3 = document.getElementById("aboutBtn");
+            var span3 = document.getElementsByClassName("close")[2];
+
+            //get references button modal
+            var modal4 = document.getElementById("refContent");
+            var button4 = document.getElementById("refBtn");
+            var span4 = document.getElementsByClassName("close")[3];
+
+
+            //opening changelog modal
+            button1.onclick = function(){
+                modal1.style.display = "block";
+            }
+            //closing changelog modal
+            span1.onclick = function(){
+                modal1.style.display = "none";
+            }
+
+            //opening upcoming changes modal
+            button2.onclick = function(){
+                modal2.style.display = "block";
+            }
+            //closing upcoming changes modal
+            span2.onclick = function(){
+                modal2.style.display = "none";
+            }
+
+            //opening about modal
+            button3.onclick = function(){
+                modal3.style.display = "block";
+            }
+            //closing about modal
+            span3.onclick = function(){
+                modal3.style.display = "none";
+            }
+
+            //opening ref modal
+            button4.onclick = function(){
+                modal4.style.display = "block";
+            }
+            //closing ref modal
+            span4.onclick = function(){
+                modal4.style.display = "none";
+            }
+
+            //close if clicking outside modal
+            window.onclick = function(event){
+                if (event.target == modal1){
+                    modal1.style.display = "none";
+                }
+                else if(event.target == modal2){
+                    modal2.style.display = "none";
+                }
+                else if(event.target == modal3){
+                    modal3.style.display = "none";
+                }
+                else if(event.target == modal4){
+                    modal4.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
+<!--References
+[1] Construction of card-like menu icons was conducted with reference to https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card
+[2] All Destiny 2-related icons are sourced from https://www.light.gg -->

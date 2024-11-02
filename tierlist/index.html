@@ -1,0 +1,472 @@
+<!--Written by Ashia Taplin-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="../tierlist.png">
+    <title>Tier List</title>
+</head>
+<body>
+    <!-- Title of Webpage -->
+    <header>
+        <a href="../index.html" style="display:inline-block; text-align:left; width:100%;">Home</a>
+        <h1 style="padding-top:10px; padding-bottom:20px; margin:0; display:inline-block;">Tier List</h1>
+    </header>
+    <!-- Creating the three tiers using tabs -->
+    <!-- Tab reference: https://www.w3schools.com/howto/howto_js_full_page_tabs.asp -->
+    <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'Warlock')">Warlock</button>
+        <button class="tab-link" onclick="openTab(event, 'Hunter')">Hunter</button>
+        <button class="tab-link" onclick="openTab(event, 'Titan')">Titan</button>
+    </div>
+    <!--Creating Warlock class tab-->
+    <div id="Warlock" class="tab-content">
+        
+        <!--Name of Tab-->
+        <h1>Warlock Class</h1>
+        <p>Warlock is a Recovery-based class that focuses on strong healing effects and high ability uptime.<br>
+            The content below will give a tier list and a tier list legend.</p>
+
+        <!--Tiering Legend title-->
+        <p> Tiering List:</p>
+
+        <!--Grid for Tiering List-->
+        <div class="TierListGrid">
+            <div class="Solipsism" grid-item>Solipsism</div>
+            <div class="Synthoceps">Synthoceps</div>
+            <div class="Star-Eater">Star-Eater</div>
+            <div class="Verity">Verity</div>
+            <div class="Vesper">Vesper</div>
+            <div class="Harmony">Harmony</div>
+            <div class="Starfire">Starfire</div>
+            <div class="Swarm">Swarm</div>
+            <div class="Claw">Claw</div>
+            <div class="ImmostLight">Inmost Light</div>
+            <div class="grid-item11">B</div>
+            <div class="grid-item12">S</div>
+            <div class="grid-item13">B</div>
+            <div class="grid-item14">C</div>
+            <div class="grid-item15">C</div>
+            <div class="grid-item16">D</div>
+            <div class="grid-item17">A</div>
+            <div class="grid-item18">A</div>
+            <div class="grid-item19">Assassin</div>
+            <div class="grid-item20">B</div>
+            <div class="grid-item21">C</div>
+            <div class="grid-item22">F</div>
+            <div class="grid-item23">F</div>
+            <div class="grid-item24">C</div>
+            <div class="grid-item25">F</div>
+            <div class="grid-item26">C</div>
+            <div class="grid-item27">B</div>
+            <div class="grid-item28">Ophidian</div>
+            <div class="grid-item29">D</div>
+            <div class="grid-item30">B</div>
+            <div class="grid-item31">D</div>
+            <div class="grid-item32">F</div>
+            <div class="grid-item33">C</div>
+            <div class="grid-item34">F</div>
+            <div class="grid-item35">F</div>
+            <div class="grid-item36">F</div>
+            <div class="grid-item37">Stag</div>
+            <div class="grid-item38">D</div>
+            <div class="grid-item39">C</div>
+            <div class="grid-item40">D</div>
+            <div class="grid-item41">B</div>
+            <div class="grid-item42">C</div>
+            <div class="grid-item43">B</div>
+            <div class="grid-item44">C</div>
+            <div class="grid-item45">D</div>
+            <div class="grid-item46">Filaments</div>
+            <div class="grid-item47">D</div>
+            <div class="grid-item48">C</div>
+            <div class="grid-item49">C</div>
+            <div class="grid-item50">D</div>
+            <div class="grid-item51">C</div>
+            <div class="grid-item52">B</div>
+            <div class="grid-item53">F</div>
+            <div class="grid-item54">D</div>
+            <div class="grid-item55">Necrotic</div>
+            <div class="grid-item56">B</div>
+            <div class="grid-item57">A</div>
+            <div class="grid-item58">D</div>
+            <div class="grid-item59">D</div>
+            <div class="grid-item60">C</div>
+            <div class="grid-item61">D</div>
+            <div class="grid-item62">C</div>
+            <div class="grid-item63">S</div>
+            <div class="grid-item64">Osimiomancy</div>
+            <div class="grid-item65">B</div>
+            <div class="grid-item66">S</div>
+            <div class="grid-item67">A</div>
+            <div class="grid-item68">C</div>
+            <div class="grid-item69">B</div>
+            <div class="grid-item70">B</div>
+            <div class="grid-item71">S</div>
+            <div class="grid-item72">C</div>
+            <div class="grid-item73">Apotheosis</div>
+            <div class="grid-item74">B</div>
+            <div class="grid-item75">A</div>
+            <div class="grid-item76">B</div>
+            <div class="grid-item77">F</div>
+            <div class="grid-item78">A</div>
+            <div class="grid-item79">F</div>
+            <div class="grid-item80">B</div>
+            <div class="grid-item81">D</div>
+          </div>
+
+<!--Example on how to get the tier from two combinatins-->
+<p>Example: Stag + Verity = Tier D</p>
+
+        <p>Tiers & Descriptions:</p>
+
+        <!--Creating collapsibles for each tier-->
+        <!--Tier S-->
+        <button type="button" class="collapsible collapsible1">S Tier: Universally powerful in every aspect of the game. A strict 
+            upgrade compared to anything else in the vast majority of situations.</button>
+     
+
+        <!--Tier A-->
+        <button type="button" class="collapsible collapsible2">A Tier: Consistently strong in all aspects of the game. 
+            May require a specific situation to be powerful, but the return is well worth it.</button>
+
+        <!--Tier B-->
+        <button type="button" class="collapsible collapsible3">B Tier: Strong in most aspects of the game. May require a specific situation to be powerful,
+            but return is well worth it.</button>
+
+        <!--Tier C-->
+        <button type="button" class="collapsible collapsible4">C Tier: Usable in some contect, but not optimal. One or both of the perks are good on their own,
+            but have little to no synergy that requires too much risk or work for a negligible return.</button>
+
+        <!--Tier D-->
+        <button type="button" class="collapsible collapsible5">D Tier: Consistently worse than most other options due to lack of synergy between the perks, or a 
+            synergy that requires too much risk or work for a negligible return.</button>
+        
+        <!--Tier F-->
+        <button type="button" class="collapsible collapsible6">F Tier: Strictly worse than simply using a normal Exotic armor piece due to lack of synergy or impact
+            on gameplay, or potential anti-synergy. Not worth using unless you have nothing else.</button>
+
+        <!--Spirit Color & Meaning title-->
+        <p>Spirit Colors & Meanings:</p>
+
+        <!--Creating collapsibles for each tier-->
+
+        <!--Light Red-->
+        <button type="button" class="collapsible collapsible7">Light Red: Class-agnostic, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Light Blue-->
+        <button type="button" class="collapsible collapsible8">Light Blue: Class-agnostic, inherits from a piece of Exotic Hunter armor.</button>
+
+        <!--Light Yellow-->
+        <button type="button" class="collapsible collapsible9">Light Yellow: Class-agnostic, inherits from a piece of Exotic Warlock armor.</button>
+
+        <!--Dark Red-->
+        <button type="button" class="collapsible collapsible10">Dark Red: Titan-exclusive, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Dark Blue-->
+        <button type="button" class="collapsible collapsible11">Dark Blue: Hunter-exclusive, inherits from a piece of Exotic Hunter armor</button>
+
+        <!--Dark Yellow-->
+        <button type="button" class="collapsible collapsible12">Dark Yellow: Warlock-exclusive, inherits from a piece of Exotic Warlock armor.</button>
+    </div>
+
+
+    <div id="Hunter" class="tab-content" style="display:none;">
+        <h1>Hunter Class</h1>
+        <p>Hunter is a Mobility-based class that specializes in safely engaging and disengaging from any enemy.<br>
+            The content below will give a tier list and a tier list legend.</p>
+            
+            <!--Tiering Legend title-->
+            <p> Tiering List:</p>
+
+             <!--Grid for Tiering List-->
+        <div class="TierListGrid">
+            <div class="grid-item82">Relativism</div>
+            <div class="grid-item83">Synthoceps</div>
+            <div class="grid-item84">Star-Eater</div>
+            <div class="grid-item85">Verity</div>
+            <div class="grid-item86">Cyrtarachne</div>
+            <div class="grid-item87">Gyrfalcon</div>
+            <div class="grid-item88">Liar</div>
+            <div class="grid-item89">Wormhusk</div>
+            <div class="grid-item90">Coyote</div>
+            <div class="grid-item91">Inmost Light</div>
+            <div class="grid-item92">S</div>
+            <div class="grid-item93">S</div>
+            <div class="grid-item94">A</div>
+            <div class="grid-item95">A</div>
+            <div class="grid-item96">B</div>
+            <div class="grid-item97">A</div>
+            <div class="grid-item98">D</div>
+            <div class="grid-item99">C</div>
+            <div class="grid-item100">Assassin</div>
+            <div class="grid-item101">S</div>
+            <div class="grid-item102">C</div>
+            <div class="grid-item103">D</div>
+            <div class="grid-item104">D</div>
+            <div class="grid-item105">B</div>
+            <div class="grid-item106">A</div>
+            <div class="grid-item107">D</div>
+            <div class="grid-item108">B</div>
+            <div class="grid-item109">Ophidian</div>
+            <div class="grid-item110">D</div>
+            <div class="grid-item111">D</div>
+            <div class="grid-item112">D</div>
+            <div class="grid-item113">D</div>
+            <div class="grid-item114">D</div>
+            <div class="grid-item115">D</div>
+            <div class="grid-item116">F</div>
+            <div class="grid-item117">F</div>
+            <div class="grid-item118">Dragon</div>
+            <div class="grid-item119">D</div>
+            <div class="grid-item120">B</div>
+            <div class="grid-item121">C</div>
+            <div class="grid-item122">D</div>
+            <div class="grid-item123">C</div>
+            <div class="grid-item124">D</div>
+            <div class="grid-item125">D</div>
+            <div class="grid-item126">B</div>
+            <div class="grid-item127">Galanor</div>
+            <div class="grid-item128">C</div>
+            <div class="grid-item129">S</div>
+            <div class="grid-item130">C</div>
+            <div class="grid-item131">C</div>
+            <div class="grid-item132">C</div>
+            <div class="grid-item133">C</div>
+            <div class="grid-item134">D</div>
+            <div class="grid-item135">C</div>
+            <div class="grid-item136">Foetracer</div>
+            <div class="grid-item137">A</div>
+            <div class="grid-item138">A</div>
+            <div class="grid-item139">A</div>
+            <div class="grid-item140">B</div>
+            <div class="grid-item141">B</div>
+            <div class="grid-item142">D</div>
+            <div class="grid-item143">F</div>
+            <div class="grid-item144">B</div>
+            <div class="grid-item145">Caliban</div>
+            <div class="grid-item146">S</div>
+            <div class="grid-item147">B</div>
+            <div class="grid-item148">C</div>
+            <div class="grid-item149">B</div>
+            <div class="grid-item150">C</div>
+            <div class="grid-item151">S</div>
+            <div class="grid-item152">D</div>
+            <div class="grid-item153">A</div>
+            <div class="grid-item154">Renewal</div>
+            <div class="grid-item155">B</div>
+            <div class="grid-item156">B</div>
+            <div class="grid-item157">F</div>
+            <div class="grid-item158">S</div>
+            <div class="grid-item159">C</div>
+            <div class="grid-item160">B</div>
+            <div class="grid-item161">D</div>
+            <div class="grid-item162">C</div>
+          </div>
+
+            <!--Example on how to get the tier from two combinatins-->
+            <p>Example: Dragon + Liar = Tier D</p>
+
+            <p>Tiers & Descriptions:</p>
+
+          <!--Creating collapsibles for each tier-->
+        <!--Tier S-->
+        <button type="button" class="collapsible collapsible1">S Tier: Universally powerful in every aspect of the game. A strict 
+            upgrade compared to anything else in the vast majority of situations.</button>
+     
+
+        <!--Tier A-->
+        <button type="button" class="collapsible collapsible2">A Tier: Consistently strong in all aspects of the game. 
+            May require a specific situation to be powerful, but the return is well worth it.</button>
+
+        <!--Tier B-->
+        <button type="button" class="collapsible collapsible3">B Tier: Strong in most aspects of the game. May require a specific situation to be powerful,
+            but return is well worth it.</button>
+
+        <!--Tier C-->
+        <button type="button" class="collapsible collapsible4">C Tier: Usable in some contect, but not optimal. One or both of the perks are good on their own,
+            but have little to no synergy that requires too much risk or work for a negligible return.</button>
+
+        <!--Tier D-->
+        <button type="button" class="collapsible collapsible5">D Tier: Consistently worse than most other options due to lack of synergy between the perks, or a 
+            synergy that requires too much risk or work for a negligible return.</button>
+        
+        <!--Tier F-->
+        <button type="button" class="collapsible collapsible6">F Tier: Strictly worse than simply using a normal Exotic armor piece due to lack of synergy or impact
+            on gameplay, or potential anti-synergy. Not worth using unless you have nothing else.</button>
+
+        <!--Spirit Color & Meaning title-->
+        <p>Spirit Colors & Meanings:</p>
+
+        <!--Creating collapsibles for each tier-->
+
+        <!--Light Red-->
+        <button type="button" class="collapsible collapsible7">Light Red: Class-agnostic, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Light Blue-->
+        <button type="button" class="collapsible collapsible8">Light Blue: Class-agnostic, inherits from a piece of Exotic Hunter armor.</button>
+
+        <!--Light Yellow-->
+        <button type="button" class="collapsible collapsible9">Light Yellow: Class-agnostic, inherits from a piece of Exotic Warlock armor.</button>
+
+        <!--Dark Red-->
+        <button type="button" class="collapsible collapsible10">Dark Red: Titan-exclusive, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Dark Blue-->
+        <button type="button" class="collapsible collapsible11">Dark Blue: Hunter-exclusive, inherits from a piece of Exotic Hunter armor</button>
+
+        <!--Dark Yellow-->
+        <button type="button" class="collapsible collapsible12">Dark Yellow: Warlock-exclusive, inherits from a piece of Exotic Warlock armor.</button>
+    </div>
+
+    <div id="Titan" class="tab-content" style="display:none;">
+        <h1>Titan Class</h1>
+        <p>Titan is a Resillience-based class that focuses on strong Melee abilities and defensive utility.<br>
+            The content below will give a tier list and a tier list legend.</p>
+
+            <!--Tiering Legend title-->
+            <p> Tiering List:</p>
+
+             <!--Grid for Tiering List-->
+        <div class="TierListGrid">
+            <div class="grid-item163">Stoicism</div>
+            <div class="grid-item164">Synthoceps</div>
+            <div class="grid-item165">Star-Eater</div>
+            <div class="grid-item166">Verity</div>
+            <div class="grid-item167">Contact</div>
+            <div class="grid-item168">Scars</div>
+            <div class="grid-item169">Horn</div>
+            <div class="grid-item170">Alpha Lupi</div>
+            <div class="grid-item171">Armamentarium</div>
+            <div class="grid-item172">Inmost Light</div>
+            <div class="grid-item173">S</div>
+            <div class="grid-item174">S</div>
+            <div class="grid-item175">B</div>
+            <div class="grid-item176">S</div>
+            <div class="grid-item177">A</div>
+            <div class="grid-item178">D</div>
+            <div class="grid-item179">D</div>
+            <div class="grid-item180">B</div>
+            <div class="grid-item181">Assassin</div>
+            <div class="grid-item182">A</div>
+            <div class="grid-item183">C</div>
+            <div class="grid-item184">D</div>
+            <div class="grid-item185">B</div>
+            <div class="grid-item186">C</div>
+            <div class="grid-item187">D</div>
+            <div class="grid-item188">D</div>
+            <div class="grid-item189">D</div>
+            <div class="grid-item190">Ophidian</div>
+            <div class="grid-item191">D</div>
+            <div class="grid-item192">C</div>
+            <div class="grid-item193">D</div>
+            <div class="grid-item194">D</div>
+            <div class="grid-item195">C</div>
+            <div class="grid-item196">F</div>
+            <div class="grid-item197">F</div>
+            <div class="grid-item198">D</div>
+            <div class="grid-item199">Severance</div>
+            <div class="grid-item200">A</div>
+            <div class="grid-item201">B</div>
+            <div class="grid-item202">C</div>
+            <div class="grid-item203">A</div>
+            <div class="grid-item204">C</div>
+            <div class="grid-item205">F</div>
+            <div class="grid-item206">F</div>
+            <div class="grid-item207">C</div>
+            <div class="grid-item208">Hoarfrost</div>
+            <div class="grid-item209">C</div>
+            <div class="grid-item210">C</div>
+            <div class="grid-item211">D</div>
+            <div class="grid-item212">C</div>
+            <div class="grid-item213">C</div>
+            <div class="grid-item214">C</div>
+            <div class="grid-item215">D</div>
+            <div class="grid-item216">D</div>
+            <div class="grid-item217">Eternal Warrior</div>
+            <div class="grid-item218">B</div>
+            <div class="grid-item219">A</div>
+            <div class="grid-item220">D</div>
+            <div class="grid-item221">C</div>
+            <div class="grid-item222">C</div>
+            <div class="grid-item223">F</div>
+            <div class="grid-item224">F</div>
+            <div class="grid-item225">D</div>
+            <div class="grid-item226">Abeyant</div>
+            <div class="grid-item227">A</div>
+            <div class="grid-item228">B</div>
+            <div class="grid-item229">C</div>
+            <div class="grid-item230">B</div>
+            <div class="grid-item231">B</div>
+            <div class="grid-item232">C</div>
+            <div class="grid-item233">D</div>
+            <div class="grid-item234">C</div>
+            <div class="grid-item235">Bear</div>
+            <div class="grid-item236">D</div>
+            <div class="grid-item237">B</div>
+            <div class="grid-item238">B</div>
+            <div class="grid-item239">C</div>
+            <div class="grid-item240">C</div>
+            <div class="grid-item241">F</div>
+            <div class="grid-item242">F</div>
+            <div class="grid-item243">A</div>
+          </div>
+           <!--Example on how to get the tier from two combinatins-->
+            <p>Example: Assassin + Star-Eater = Tier C</p>
+            
+            <p>Tiers & Descriptions:</p>
+
+        <!--Creating collapsibles for each tier-->
+        <!--Tier S-->
+        <button type="button" class="collapsible collapsible1">S Tier: Universally powerful in every aspect of the game. A strict 
+            upgrade compared to anything else in the vast majority of situations.</button>
+     
+
+        <!--Tier A-->
+        <button type="button" class="collapsible collapsible2">A Tier: Consistently strong in all aspects of the game. 
+            May require a specific situation to be powerful, but the return is well worth it.</button>
+
+        <!--Tier B-->
+        <button type="button" class="collapsible collapsible3">B Tier: Strong in most aspects of the game. May require a specific situation to be powerful,
+            but return is well worth it.</button>
+
+        <!--Tier C-->
+        <button type="button" class="collapsible collapsible4">C Tier: Usable in some contect, but not optimal. One or both of the perks are good on their own,
+            but have little to no synergy that requires too much risk or work for a negligible return.</button>
+
+        <!--Tier D-->
+        <button type="button" class="collapsible collapsible5">D Tier: Consistently worse than most other options due to lack of synergy between the perks, or a 
+            synergy that requires too much risk or work for a negligible return.</button>
+        
+        <!--Tier F-->
+        <button type="button" class="collapsible collapsible6">F Tier: Strictly worse than simply using a normal Exotic armor piece due to lack of synergy or impact
+            on gameplay, or potential anti-synergy. Not worth using unless you have nothing else.</button>
+
+        <!--Spirit Color & Meaning title-->
+        <p>Spirit Colors & Meanings:</p>
+
+        <!--Creating collapsibles for each tier-->
+
+        <!--Light Red-->
+        <button type="button" class="collapsible collapsible7">Light Red: Class-agnostic, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Light Blue-->
+        <button type="button" class="collapsible collapsible8">Light Blue: Class-agnostic, inherits from a piece of Exotic Hunter armor.</button>
+
+        <!--Light Yellow-->
+        <button type="button" class="collapsible collapsible9">Light Yellow: Class-agnostic, inherits from a piece of Exotic Warlock armor.</button>
+
+        <!--Dark Red-->
+        <button type="button" class="collapsible collapsible10">Dark Red: Titan-exclusive, inherits from a piece of Exotic Titan armor.</button>
+
+        <!--Dark Blue-->
+        <button type="button" class="collapsible collapsible11">Dark Blue: Hunter-exclusive, inherits from a piece of Exotic Hunter armor</button>
+
+        <!--Dark Yellow-->
+        <button type="button" class="collapsible collapsible12">Dark Yellow: Warlock-exclusive, inherits from a piece of Exotic Warlock armor.</button>
+    </div>
+</body>
+</html>

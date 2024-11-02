@@ -1,0 +1,2149 @@
+/*Written by Ashia Taplin*/
+/* Title Styling */
+body {
+  background-image:url(../bg.png);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* General page styling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the tab buttons */
+.tabs {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tab-link {
+  background-color: rgb(177, 219, 227);
+  color: black;
+  padding: 14px 20px;
+  margin: 0 5px;
+  border: solid black;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tab-link:hover {
+  background-color: #777;
+}
+
+.tab-link.active {
+  background-color: white;
+}
+
+/* Styling for the tab content */
+.tab-content {
+  display: none;
+  height: calc(100vh - 50px); /* Full height minus the height of the tabs */
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+.tab-content h1 {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.tab-content p {
+  font-size: 1em;}
+
+  /* Styling for Tiers collapsibles */
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  display: flex;
+}
+
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border:solid black;
+  margin-bottom: 10px;
+}
+
+/* Tier S */
+.collapsible1 {
+  background-color: rgb(177, 219, 227);
+}
+
+/* Tier A */
+.collapsible2 {
+  background-color: rgba(0, 128, 0, 0.613);
+}
+
+
+/*Tier B */
+.collapsible3 {
+  background-color: rgb(95, 129, 95);
+}
+
+/* Tier C */
+.collapsible4 {
+  background-color: rgb(221, 219, 134);
+}
+
+
+/* Tier D*/
+.collapsible5 {
+  background-color: rgb(232, 136, 18);
+}
+
+
+/*Tier F*/
+.collapsible6 {
+  background-color: rgb(143, 27, 27);
+}
+
+ /* Styling for Spirit Color Collapasables */
+
+  /* Light Red */
+  .collapsible7 {
+    background-color: rgb(234, 176, 169);
+  }
+  
+ /* Light Blue */
+ .collapsible8 {
+  background-color: rgb(157, 192, 233);
+}
+
+ /* Light Yellow */
+ .collapsible9 {
+  background-color: rgb(248, 240, 100);
+}
+
+
+ /* Dark Red */
+ .collapsible10 {
+  background-color: rgb(87, 16, 9);
+}
+
+ /* Dark Blue */
+ .collapsible11 {
+  background-color: rgb(32, 68, 160);
+}
+
+ /* Dark Yellow */
+ .collapsible12 {
+  background-color:  rgb(207, 204, 10);
+}
+
+.active, .collapsible:hover {
+  background-color: #777;
+  opacity: 0.9;
+}
+
+/*Grid for Tier List */
+.TierListGrid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  background-color: rgb(46, 45, 45);
+  padding: 10px;
+  gap: 5px;
+}
+
+/*Styling for Grid Items in Warlock Tier List */
+.Solipsism {
+background-color: rgb(157, 192, 233);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 10px;
+font-size: 15px;
+text-align: center;
+}
+
+.Synthoceps{
+  background-color:  rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Star-Eater{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Verity{
+  background-color:rgb(248, 240, 100);
+  text-size-adjust: center;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Vesper{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Harmony{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Starfire{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Swarm{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Claw{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.ImmostLight{
+  background-color:  rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item11{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item12{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item13{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item14{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item15{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item16{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item17{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item18{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item19{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item20{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.grid-item21{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item22{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item23{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item24{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item25{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item26{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item27{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item28{
+  background-color:rgb(248, 240, 100);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item29{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item30{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item31{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item32{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item33{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item34{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item35{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item36{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item37{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.grid-item38{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item39{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item40{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item41{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item42{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.grid-item43{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item44{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item45{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item46{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item47{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item48{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item49{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item50{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item49{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item50{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item51{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item52{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item53{
+  background-color: rgb(141, 28, 16);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item54{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item55{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item56{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item57{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item58{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item59{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item60{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item61{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item62{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item63{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item64{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item65{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item66{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item67{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item68{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item69{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item70{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item71{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item72{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item73{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item74{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item75{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item76{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item77{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item78{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item79{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item80{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item81{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item82{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item83{
+  background-color: rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item84{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item85{
+  background-color: rgb(248, 240, 100);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item86{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item87{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item88{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item89{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item90{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item91{
+  background-color: rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item92{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item93{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item94{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item96{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item95{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item97{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item98{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.grid-item99{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item100{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item101{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.grid-item102{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item103{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item104{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item105{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item106{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item107{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item108{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+.grid-item109{
+  background-color: rgb(248, 240, 100);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item110{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item110{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item111{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item112{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item113{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item114{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item115{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item116{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item117{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item118{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item119{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item120{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item121{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item122{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item123{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item124{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item125{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item126{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item127{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item128{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item129{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item130{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item131{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item132{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item133{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item134{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item135{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item136{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item137{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item138{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item139{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item140{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item141{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item142{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item143{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item144{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item145{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item146{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item147{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item148{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item149{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item150{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item151{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item152{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item153{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item154{
+  background-color: rgb(32, 68, 160);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item155{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item156{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item157{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item158{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.grid-item159{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item160{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item161{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item162{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item163{
+  background-color:  rgb(207, 204, 10);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item164{
+  background-color: rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item165{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item166{
+  background-color: rgb(248, 240, 100);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item167{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item168{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item169{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item170{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item171{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item172{
+  background-color: rgb(234, 176, 169);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item173{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item174{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item175{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item176{
+  background-color: rgb(177, 219, 227);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item177{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item178{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item179{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item180{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item181{
+  background-color: rgb(157, 192, 233);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item182{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item183{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item184{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item185{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item186{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item187{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item188{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item189{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item190{
+  background-color:rgb(248, 240, 100);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item191{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item192{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item193{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item194{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item195{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item196{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item197{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item198{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item199{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item200{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item201{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item202{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item203{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item204{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item205{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item206{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item207{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item208{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item209{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item210{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item211{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item212{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item213{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item214{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item215{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item216{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item217{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item218{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item219{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item220{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item221{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item222{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item223{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item224{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item225{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item226{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item227{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item228{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item229{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item230{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item231{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item232{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item233{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item234{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item235{
+  background-color: rgb(87, 16, 9);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item236{
+  background-color: rgb(232, 136, 18);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item237{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item238{
+  background-color: rgb(95, 129, 95);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item239{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item240{
+  background-color: rgb(221, 219, 134);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item241{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item242{
+  background-color: rgb(143, 27, 27);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.grid-item243{
+  background-color: rgba(0, 128, 0, 0.613);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}

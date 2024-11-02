@@ -1,0 +1,101 @@
+/*CSS FILE - styles used for the home page and some elements of other pages
+Written by Wyatt Dove*/
+
+/*Background image for home page, source: https://www.reddit.com/r/destiny2/comments/kohhk8/destiny_2_old_loading_screen_wallpaper/*/
+body{background-image:url(bg.png)}
+
+/*Main header banner*/
+header.mHeader {background-color: black; 
+            margin: 0; 
+            padding: 0;}
+
+body {margin: 0; 
+    padding: 0;}
+
+.d2header1 {color:white; 
+            padding-top:20px; 
+            text-align: center; 
+            margin:0; 
+            padding-top:25px;}
+
+.d2header3 {color:white; 
+            padding-bottom:20px; 
+            text-align: center; 
+            padding-bottom:25px;}
+
+/*Main display cards, reference: Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card*/
+div.cards {display: grid; 
+        grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); 
+        grid-gap:20px; 
+        max-width:1080px; 
+        margin: auto;
+        padding-bottom:150px;}
+
+
+article.card{background-color: rgb(184, 184, 184); 
+            border: solid black; 
+            display: grid; 
+            grid-template-rows: max-content 200px 1fr; 
+            padding: 10px;}
+
+img.center{display:block; 
+        margin-left: auto; 
+        margin-right: auto;}
+
+/*Footer for the cards specifically*/
+footer.cardfooter{background-color:white; 
+                border: solid black; 
+                margin:5px; 
+                text-align: center;}
+
+.center{text-align:center; 
+         margin: 5px;}
+
+.box{background-color: rgb(184, 184, 184);
+        border: solid black;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width:50%;
+        padding:10px;
+        text-align:center;}
+
+/*Modal CSS, reference: https://www.w3schools.com/howto/howto_css_modals.asp*/
+.modal{display:none;
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color: rgb(128, 128, 128, 0.5);}
+
+.modal-content{background-color: lightgray;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 60%;}
+
+.close{color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;}
+
+.close:hover,
+.close:focus{color:red;
+    text-decoration:none;
+    cursor: pointer;}
+
+/*design for the buttons at the bottom of the page*/
+.infobutton {background-color:lightgray;
+    border: solid black;
+    color:black;
+    padding:15px;
+    text-align: center;
+    display:inline-block;
+    font-size:16px;
+    margin: 10px;}
+
+.footer {position:fixed;
+    bottom: 0;}

@@ -1,0 +1,1371 @@
+<!--Written by Wyatt Dove-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verbs</title>
+        <meta charset="UTF-8">
+        <meta name="vp" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="verbs_styles.css">
+        <script src="verbs_scripts.js" defer></script>
+        <link rel="icon" href="icons/prism/icon_prism.png">
+    </head>
+
+    <body>
+        <!--Header/title and introductory info-->
+        <header class="mHeader">
+            <div>
+                <a href="../index.html" style="display:inline-block; text-align:left; width:100%;">Home</a>
+                <h1 class="d2header1">Elemental Verbs</h1>
+                <h3 class="d2header3">A comprehensive breakdown of all Elemental Effects</h3>
+            </div>
+        </header>
+
+        <!--Splitting the page into 6 tabs, one for each element-->
+        <!--Reference: https://www.w3schools.com/howto/howto_js_full_page_tabs.asp-->
+        <div class="tabs">
+            <button class="tab-link" onclick="openTab(event, 'Solar')">Solar</button>
+            <button class="tab-link" onclick="openTab(event, 'Arc')">Arc</button>
+            <button class="tab-link" onclick="openTab(event, 'Void')">Void</button>
+            <button class="tab-link" onclick="openTab(event, 'Stasis')">Stasis</button>
+            <button class="tab-link" onclick="openTab(event, 'Strand')">Strand</button>
+            <button class="tab-link" onclick="openTab(event, 'Prismatic')">Prismatic</button>
+        </div>
+
+        <!--Solar element tab-->
+        <div id="Solar" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/solar/banner_solar.png">
+                <h4 class="entry"><img class="icon" src="icons/solar/icon_solar.png">Solar specializes in weapon boosts, potent healing effects, and powerful explosions.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Buffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Cure Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/cure.png">Cure</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">You are healed in a burst of mending <img class="icon-small" src="icons/solar/icon_solar.png">Solar Light.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Restores 60 (30) HP per stack of cure over 0.1 seconds, with an approximately 1 second internal cooldown between Cure healing instances.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Healing Grenade (Cure x1)</li>
+                    <li>Ember of Resolve Solar Fragment (Cure x1)</li>
+                    <li>Facet of Mending Prismatic Fragment (Cure x1)</li>
+                    <li>Red Death Reformed Exotic Pulse Rifle (Cure x2)</li>
+                    <li>Heal Clip Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Phoenix Dive Class Ability (Cure x2)</li>
+                    <li>Heat Rises Solar Aspect (Cure x2)</li>
+                    <li>Icarus Dash Solar Aspect (Cure x1)</li>
+                    <li>Apotheosis Veil Exotic Helmet (Cure x3)</li>
+                    <li>Karnstein Armlets Exotic Gauntlets (Cure x3)</li>
+                    <li>Speaker’s Sight Exotic Helmet (Cure x1)</li>
+                    <li>Edge of Intent Exotic Glaive (Cure x1)</li>
+                    <li>Touch of Flame Solar Aspect: Healing Grenade, Speaker's Sight, and Edge of Intent (Cure x2)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Throwing Hammer Melee Ability (Cure x1)</li>
+                </ul>
+            </div>
+
+            <!--Restoration Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/restoration.png">Restoration</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">You regenerate health and shields over time. Cannot be interrupted by taking damage.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">While active, Restoration continuously restores health over time and can be extended to a maximum duration of 15 seconds by default. Restoration x1 / x2 restores 35 (17.5) / 50 (25) HP per second respectively.</p>
+                <p class="desc">When refreshing Restoration, it will prioritize the highest stack count and longest duration achieved (i.e. if 15 seconds of Restoration was achieved, using a Healing Grenade will refresh it to 15 seconds regardless of remaining time). This does not apply to duration extension effects, which extend the Restoration timer by a flat duration.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Healing Grenade (Restoration x1)</li>
+                    <li>Ember of Mercy Solar Fragment (Restoration x1)</li>
+                    <li>Facet of Purpose Prismatic Fragment (Restoration x1)</li>
+                    <li>Red Death Reformed (Catalyst, Restoration x2)</li>
+                    <li>Support Frame Intrinsic</li>
+                    <li>Physic Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Phoenix Dive Class Ability (Heat Rises active, Restoration x2)</li>
+                    <li>Well of Radiance Super Ability (Unique, 50 HP/s)</li>
+                    <li>Heat Rises Solar Aspect (Healing Grenade consumption, Restoration x1)</li>
+                    <li>Edge of Intent Exotic Glaive (Restoration x1)</li>
+                    <li>Karnstein Armlets Exotic Gauntlets (Melee Restoration x1, Finisher Restoration x2)</li>
+                    <li>Speaker’s Sight (Restoration x1)</li>
+                    <li>Touch of Flame Solar Aspect: Heat Rises Healing Grenade, Speaker's Sight, and Edge of Intent (Restoration x2)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Sol Invictus Solar Aspect (Restoration x1)</li>
+                    <li>Precious Scars Exotic Helmet (Restoration x1)</li>
+                    <li>Stronghold Exotic Gauntlets (Restoration x2)</li>
+                </ul>
+            </div>
+
+            <!--Radiant Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/radiant.png">Radiant</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">Your weapons are enhanced by the power of the Traveler and deal increased damage to combatants. </p>
+                <p class="desc">While you are radiant, your weapons pierce the shields of Barrier Champions and stun them.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">While Radiant is active, Weapon damage is boosted by 25% (10%). Radiant lasts for 10 seconds by default, but can be extended up to 15 seconds. Radiant will also affect the damage of the Golden Gun Super Ability.</p>
+                <p class="desc">While Radiant, all weapons that do not already have the ability to stun champions gain Shield-Piercing Rounds, allowing them to break the shields of Barrier Champions and stun them.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Ember of Torches Solar Fragment</li>
+                    <li>Facet of Dawn Prismatic Fragment</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Song of Flame and Well of Radiance Super Abilities</li>
+                    <li>Rain of Fire Exotic Boots</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Acrobat’s Dodge Class Ability</li>
+                    <li>Lightweight Knife Melee Ability</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>   
+                    <li>None</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Debuffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Scorch Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/scorch.png">Scorch</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is singed by destructive <img class="icon-small" src="icons/solar/icon_solar.png">Solar Light, taking damage over time. Scorch damage increases as the target accumulates more Scorch stacks.</p>
+                <p class="desc">After enough Scorch stacks are applied to the target, they ignite.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Targets with any amount of Scorch stacks will take a varying amount of damage every 0.56 seconds depending on the amount of Scorch stacks applied. Scorch can stack up to 100 times, and upon reaching this limit, all stacks are removed and a Solar Ignition is triggered.</p>
+                <p class="desc">Base Scorch damage per tick is calculated as follows:</p>
+                <ul>
+                    <li>3 + (0.195 * stack count)</li>
+                    <li>Non-boss combatants receive a 20% increase to Scorch damage</li>
+                    <li>Scorch deals 2.5% increased damage after 60 Scorch stacks have been reached, indicated by yellow damage numbers</li>
+                    <li>Enemy players receive a flat 3 / 5 / 6.5 / 7.21 / 8.64 Scorch damage at 1 / 30 / 50 / 60 / 80 stacks of Scorch, and Scorch damage cannot be fatal</li>
+                </ul>
+                <p class="desc">Scorch decay over time is calculated as follows:</p>
+                <ul>
+                    <li>Scorch lasts for 4.5 seconds before falling off at a rate of 5.67 stacks every 0.56 seconds (approximately 10 stacks lost per second)</li>
+                    <li>Against enemy players, Scorch decreases by 1 stack every 0.04 seconds (25 stacks per second)</li>
+                </ul>
+                <p class="desc">The Ember of Ashes Solar Fragment increases the amount of Scorch applied from each source by a varying amount, indicated next to each source in parentheses below. </p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Firebolt Grenade - Scorch x20 (+10)</li>
+                    <li>Fusion Grenade - Scorch x40 (+20)</li>
+                    <li>Incendiary Grenade - Scorch x60 (+30)</li>
+                    <li>Solar Grenade - Scorch x17 (+4.5) on creation, Scorch x17 (+13) on expiration</li>
+                    <li>Swarm Grenade - Scorch x5 (+3) per drone, x45 (+27) total</li>
+                    <li>Thermite Grenade - Scorch x10 (+10) per wave, x40 (+40) total</li>
+                    <li>Tripmine Grenade - Scorch x40 (+20)</li>
+                    <li>Ember of Char Solar Fragment - Scorch x40 (+20)</li>
+                    <li>Facet of Defiance Prismatic Fragment - Scorch x40</li>
+                    <li>Dragon’s Breath Exotic Rocket Launcher - lots of Scorch, difficult to calculate</li>
+                    <li>Polaris Lance Exotic Scout Rifle - Scorch x40 (+20) on Perfect Fifth (applies to Ergo Sum)</li>
+                    <li>Prometheus Lens Exotic Trace Rifle - Scorch x1 per shot (?)</li>
+                    <li>Skyburner’s Oath Exotic Scout Rifle - Scorch x5 (+5) per hip fire shot</li>
+                    <li>Sunshot Exotic Hand Cannon - Scorch x10 (+5) on final blow explosion</li>
+                    <li>Tessellation Exotic Fusion Rifle - Scorch x15 (+5) with Solar Grenade</li>
+                    <li>Tommy’s Matchbook Exotic Auto Rifle - Scorch x15 (+5) every 5 shots</li>
+                    <li>One Thousand Voices Exotic Fusion Rifle - Scorch x10 (+5) per explosion, x90 (+45) total</li>
+                    <li>Two-Tailed Fox Exotic Rocket Launcher - Scorch x60 (+30) </li>
+                    <li>Incandescent Weapon Perk - Scorch x30 (+15)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Phoenix Dive Class Ability - Scorch x40 (+20) during Heat Rises</li>
+                    <li>Celestial Fire Melee Ability - Scorch x10 (+5) per blast, x30 (+15) total</li>
+                    <li>Incinerator Snap Melee Ability - Scorch x20 (+10) per spark, x100 (+50) total</li>
+                    <li>Song of Flame: Solar/Kinetic Weapons - varying Scorch per hit</li>
+                    <li>Song of Flame: Solar Wisp - Scorch x40 (+20)</li>
+                    <li>Song of Flame: Celestial Fire - Scorch x10 (+5) per blast, x50 (+25) total</li>
+                    <li>Song of Flame: Incinerator Snap - Scorch x20 (+10), x140 (+70) total</li>
+                    <li>Well of Radiance - Scorch x40 (+20) on cast</li>
+                    <li>Hellion Solar Aspect - Scorch x30 (+10) per hit</li>
+                    <li>Chromatic Fire Exotic Robes - Scorch x15 (+5)</li>
+                    <li>Dawn Chorus - Scorch x30 (+10) per projectile</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Knife Trick Melee Abilty - Scorch x20 (+10) per knife, x60 (+30) total</li>
+                    <li>Hailfire Spike Prismatic Grenade - Scorch x10 per 0.25 seconds</li>
+                    <li>The Bombardiers Exotic Boots - Scorch x40 (+20)</li>
+                    <li>Caliban’s Hand Exotic Gauntlets - Scorch x60 (+0)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Hammer Strike Melee Ability - Scorch x40 (+20)</li>
+                    <li>Burning Maul Super Ability - Scorch x3 (+2) per 0.56 seconds from cyclones</li>
+                    <li>Consecration Solar Aspect - Scorch x40 (+20) on first wave</li>
+                    <li>Roaring Flames Solar Aspect - Scorch x30 (+10) on unpowered melee hits</li>
+                    <li>Sol Invictus Solar Aspect - Scorch x5 (+3) per 0.167 seconds from Sunspots</li>
+                    <li>Kephri’s Horn Exotic Helmet - Scorch x60 (+30) per hit (applies to Spirit of the Horn on Stoicism)</li>
+                    <li>Pyrogale Gauntlets Exotic Gauntlets - Scorch x20 (+40) on Burning Maul wave impact, Scorch x3 (+2) per 0.56 seconds from cyclones</li>
+                </ul>
+            </div>
+
+            <!--Ignition Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/ignition.png">Ignition</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A large <img class="icon-small" src="icons/solar/icon_solar.png">Solar explosion which deals damage in an area around the target and stuns Unstoppable Champions.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">On creation, Ignitions deal 750 base Solar damage in a 10 meter radius with no damage falloff. Ignition damage will inherit damage bonuses from the source of the Ignition (i.e. an Incinerator Snap boosted by Winter’s Guile will boost the Ignition damage as well).</p>
+                <p class="desc">Repeated Ignitions within 5 seconds of each other against the same target will sharply reduce the damage dealt by each subsequent Ignition. Each Ignition deals 60% decreased damage, down to a maximum reduction of 97.3% after 4 Ignitions. This is a bug that will be fixed mid-November 2024.</p>
+                <p class="desc">Ignition damage will stun Unstoppable Champions.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Scorch x100 from any source</li>
+                    <li>Ember of Combustion Solar Fragment</li>
+                    <li>Eriana’s Vow Exotic Hand Cannon (Solar or Barrier Champion shield break)</li>
+                    <li>Ice Breaker Exotic Sniper Rifle</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Weighted Throwing Knife Melee Ability (on hit to a Scorched target)</li>
+                    <li>Gunpowder Gamble Solar Aspect</li>
+                    <li>Caliban’s Hand Exotic Gauntlets</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Hammer Strike Melee Ability (final blow)</li>
+                    <li>Consecration Solar Aspect</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Other</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Firesprite Verb-->
+            <button class="collapsible" style="background-color:rgb(231, 201, 179);"><img class="icon" src="icons/solar/firesprite.png">Firesprite</button>
+            <div class="collcontent" style="background-color:rgb(231, 201, 179);">
+                <h4 class="d2header4">Classification: Elemental Pickup</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A luminous concentration of <img class="icon-small" src="icons/solar/icon_solar.png">Solar energy. When picked up, Firesprites grant grenade energy.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Firesprites hover at the point of creation until the player collects them or their duration expires. On pickup, Firesprites grant 12.5% Grenade Ability energy and have a 5 second cooldown between creations. Firesprites persist for 25 seconds before disappearing.</p>
+                <p class="desc">Firesprites are unique to the player that created them and are not shared between allies.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Ember of Combustion, Ember of Searing, and Ember of Tempering Solar Fragments</li>
+                    <li>Facet of Awakening Prismatic Fragment</li>
+                    <li>Dragon’s Breath Exotic Rocket Launcher (Catalyst)</li>
+                    <li>Synergy Weapon Mod</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+
+        <!--Arc element tab-->
+        <div id="Arc" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/arc/banner_arc.png">
+                <h4 class="entry"><img class="icon" src="icons/arc/icon_arc.png">Arc specializes in high mobility and potent crowd control.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Buffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Amplified Verb-->
+            <button class="collapsible" style="background-color:rgb(186, 203, 216);"><img class="icon" src="icons/arc/amplified.png">Amplified</button>
+            <div class="collcontent" style="background-color:rgb(186, 203, 216);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">Your movement speed and weapon handling are greatly increased. After sprinting for a short time, your movement speed is further increased. Rapidly defeating targets with Arc damage while any Arc ability is equipped makes you Amplified.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Amplified may be gained by incrementing a hidden counter in-game. This counter is incremented by getting Arc damage final blows within 6 seconds of each other. Tier 1 / 2 / 3+ enemies grant 25% / 50% / 100% counter progress per final blow. Alternatively, Amplified can be gained immediately through certain Aspects.</p>
+                <p class="desc">While Amplified, the player is granted 50 Mobility, 33% increased slide distance, 40 Handling and 0.95x handling duration multiplier for all equipped Weapons for 15 seconds. After sprinting for 2.5 seconds while Amplified, the Speed Booster buff is granted.</p>
+                <p class="desc">While Speed Booster is active, the player gains maximized movement speed, 50% increased slide distance, 25% increased jump height, and 15% damage resistance. Speed Booster will linger for 2 seconds after the player stops sprinting, and persists even if Amplified expires.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Spark of Volts Arc Fragment</li>
+                    <li>Facet of Purpose Prismatic Fragment</li>
+                    <li>Ex Diris Exotic Grenade Launcher</li>
+                    <li>Rapid Arc final blows with any Arc Ability equipped</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Electrostatic Mind and Lightning Surge Aspects</li>
+                    <li>Getaway Artist Exotic Gauntlets</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Flow State and Ascension Aspects</li>
+                    <li>Raiju’s Harness Exotic Chestplate</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Knockout Aspect</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Debuffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Blind Verb-->
+            <button class="collapsible" style="background-color:rgb(186, 203, 216);"><img class="icon" src="icons/arc/blind.png">Blind</button>
+            <div class="collcontent" style="background-color:rgb(186, 203, 216);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">Combatants are disoriented and cannot fire their weapons. Opposing Guardians’ HUD is removed and their vision is obscured. When blinded, Unstoppable Champions are stunned.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Combatants afflicted with Blind are disoriented, rendering them completely unable to attack or use abilities for 10 seconds. Guardians in PvP have their HUD removed, a white disorienting effect applied to their screen, and audio distorted for 3 seconds.</p>
+                <p class="desc">Afflicting an Unstoppable Champion with the Blind debuff will stun them.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Flashbang Grenade</li>
+                    <li>Spark of Beacons and Spark of Brilliance Arc Fragments</li>
+                    <li>Touch of Malice Exotic Scout Rifle (Alternate fire)</li>
+                    <li>Centrifuse Exotic Auto Rifle</li>
+                    <li>Ex Diris Exotic Grenade Launcher (Arc Moths)</li>
+                    <li>Tessellation Exotic Fusion Rifle (Arc Grenade)</li>
+                    <li>Grand Overture Exotic Machine Gun (Catalyst)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Chromatic Fire Exotic Robes</li>
+                    <li>Vesper of Radius Exotic Robes (applies to Spirit of Vesper on Solipsism)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Disorienting Blow Melee Ability</li>
+                    <li>Arc Staff Super Ability (Light-Light-Heavy Combo Attack)</li>
+                    <li>Lethal Current Aspect</li>
+                    <li>Blight Ranger Exotic Helmet</li>
+                    <li>The Bombardiers Exotic Boots</li>
+                    <li>Mothkeeper’s Wraps Exotic Gauntlets</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Seismic Strike Melee Ability</li>
+                    <li>Touch of Thunder Aspect with Flashbang Grenade</li>
+                    <li>Helm of Saint-14 Exotic Helmet</li>
+                </ul>
+            </div>
+
+            <!--Jolt Verb-->
+            <button class="collapsible" style="background-color:rgb(186, 203, 216);"><img class="icon" src="icons/arc/jolt.png">Jolt</button>
+            <div class="collcontent" style="background-color:rgb(186, 203, 216);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is energized with destructive <img class="icon-small" src="icons/arc/icon_arc.png">Arc Light. They take additional damage while jolted and chain lightning to nearby targets. Jolt damage causes Overload Champions to be stunned.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Targets afflicted with jolt will release chain lightning upon taking 120 base damage, dealing 132 base damage to all enemies within 8 meters. Jolt lasts for 10 seconds and can be refreshed by reapplying the effect. There is a 0.8 second internal cooldown between chain lightning activations.</p>
+                <p class="desc">Enemy players will be Jolted for 5 seconds, dealing 51 damage to nearby players upon receiving 45 damage. Players will not receive the Jolt damage unless there are nearby players to receive chain lightning damage.</p>
+                <p class="desc">The chain lightning damage from Jolt will stun Overload Champions.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Spark of Instinct and Spark of Shock Arc Fragments</li>
+                    <li>Facet of Defiance and Facet of Dominance Prismatic Fragments</li>
+                    <li>Delicate Tomb Exotic Fusion Rifle</li>
+                    <li>D.A.R.C.I. Exotic Sniper Rifle</li>
+                    <li>Two-Tailed Fox Exotic Rocket Launcher (Catalyst)</li>
+                    <li>Voltshot and Jolting Feedback Weapon Perks</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Chain Lightning Melee Ability</li>
+                    <li>Stormtrance and Chaos Reach Super Abilities</li>
+                    <li>Lightning Surge Aspect</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Gathering Storm Super Ability</li>
+                    <li>Ascension, Lethal Current, and Tempest Strike Aspects</li>
+                    <li>Edge of Concurrence Exotic Glaive</li>
+                    <li>Raiju’s Harness Exotic Chestplate</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Touch of Thunder Aspect (Lightning Grenade)</li>
+                    <li>Electrified Snare Prismatic Grenade</li>
+                    <li>ACD/0 Feedback Fence Exotic Gauntlets</li>
+                    <li>Point-Contact Cannon Brace Exotic Gauntlets (also applies to Spirit of Contact on Stoicism)</li>
+                </ul>
+            </div>
+
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Other</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Ionic Trace Verb-->
+            <button class="collapsible" style="background-color:rgb(186, 203, 216);"><img class="icon" src="icons/arc/ionictrace.png">Ionic Trace</button>
+            <div class="collcontent" style="background-color:rgb(186, 203, 216);">
+                <h4 class="d2header4">Classification: Elemental Pickup</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A bolt of pure <img class="icon-small" src="icons/arc/icon_arc.png">Arc energy that travels along the ground, seeking toward its creator. When picked up, Ionic Traces grant ability energy.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Upon creation, Ionic Traces seek from the point of creation towards the player at a rate of 6 meters per second and grant 12.5% / 12.5% / 15% energy to Grenade, Melee, and Class Abilities respectively.</p>
+                <p class="desc">Ionic Traces are unique to the player who created them.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Spark of Discharge and Spark of Ions Arc Fragments</li>
+                    <li>Facet of Awakening Prismatic Fragment</li>
+                    <li>Coldheart Exotic Trace Rifle</li>
+                    <li>Delicate Tomb Exotic Fusion Rifle</li>
+                    <li>Synergy Weapon Mod</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Electrostatic Mind Aspect</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Touch of Thunder Aspect (Pulse Grenade)</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+
+        <!--Void element tab-->
+        <div id="Void" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/void/banner_void.png">
+                <h4 class="entry"><img class="icon" src="icons/void/icon_void.png">Void specializes in strong survivability and debuffing enemies.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Buffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Devour Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/devour.png">Devour</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">Feast on the energy of your defeated foes. Final blows restore you to full health, grant grenade energy, and extend Devour.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Upon activation and upon every subsequent final blow, 100 HP is restored. By default, Devour lasts 10 seconds, and an additional 5 seconds is added upon subsequent final blows. Final blows while Devour is active additionally grant 7.5% / 11.6% / 13.75% / 20% for Tier 1 / 2 / 3 / 4 combatant final blows respectively.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Starvation Void Fragment</li>
+                    <li>Buried Bloodline Exotic Sidearm</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Feed the Void Aspect</li>
+                    <li>Secant Filaments Exotic Boots (applies to Spirit of the Filaments on Solipsism)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Mask of the Quiet One Exotic Helmet</li>
+                </ul>
+            </div>
+
+            <!--Invisibility Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/invisibility.png">Invisibility</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">You vanish from sight and do not appear on radar. While invisible, your radar range is reduced. Performing offensive actions will end invisibility.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">While Invisibility is active, the player’s maximum radar range is reduced to 24 meters. Combatants are completely unable to target the player, instead targeting either their last known location or not attacking at all. Loud actions, such as double jumps, sprinting, or Dodging on a Hunter, can allow them to track the player, but not attack. Tracking projectiles are unable to track an Invisible player, and will lose their tracking ability if the player becomes Invisible while they are homing</p>
+                <p class="desc">Enemy players cannot see the Invisible player’s health bar, and the player will only ping radar every 5 seconds (or 0.6 seconds upon performing a loud action.</p>
+                <p class="desc">Actions that prematurely end Invisibility include firing weapons, using any ability aside from Hunter Dodges, and summoning a Vehicle.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Obscurity Void Fragment</li>
+                    <li>Rat King Exotic Sidearm</li>
+                    <li>Heartshadow Exotic Sword</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Spectral Blades Super Ability</li>
+                    <li>Trapper’s Ambush, Vanishing Step, and Stylish Executioner Void Aspects</li>
+                    <li>Assassin’s Cowl Exotic Helmet (applies to Spirit of the Assassin on Relativism)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+
+            <!--Overshield Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/overshield.png">Overshield</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">You are armored with a protective barrier of <img class="icon-small" src="icons/void/icon_void.png">Void Light. Reduces damage taken from combatants.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Void Overshield applies additional HP on top of your original health bar, which takes damage instead of your original health bar while active. Damage sustained by the Overshield does not stop Health regeneration.</p>
+                <p class="desc">Void Overshields can have a maximum of 45 HP with a default duration of 10 seconds. The Overshield received 70% less damage from combatants.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Vigilance Void Fragment</li>
+                    <li>Facet of Purpose Prismatic Fragment</li>
+                    <li>Ex Diris Exotic Grenade Launcher (Void Moths)</li>
+                    <li>The Manticore Exotic Submachine Gun</li>
+                    <li>Vexcalibur Exotic Glaive</li>
+                    <li>Repulsor Brace Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Gyrfalcon’s Hauberk Exotic Chestplate </li>
+                    <li>Mothkeeper’s Wraps Exotic Gauntlets</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Shield Bash and Shield Throw Melee Abilities</li>
+                    <li>Ward of Dawn Super Ability</li>
+                    <li>Bastion, Offensive Bulwark, and Unbreakable Void Aspects</li>
+                    <li>No Backup Plans Exotic Gauntlets</li>
+                    <li>Edge of Action Exotic Glaive</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Debuffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Suppression Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/suppress.png">Suppression</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is taken out of any active abilities and cannot activate any abilities or movement modes while suppression persists. Afflicted combatants cannot fire their weapons. When suppressed, Overload Champions are stunned.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Suppressed enemies are removed from any active abilities and become completely unable to use any abilities for 10 seconds, reduced to 5 seconds against enemy players.</p>
+                <p class="desc">Suppressed tier 1 and 2 combatants are rendered completely unable to fire their weapons and become disoriented. Suppressed enemy players are removed from their active Super Abilities and cannot use Grenade, Melee, Class, Super, or Movement Abilities.</p>
+                <p class="desc">Upon being inflicted with Suppression, Overload Champions are stunned.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Suppressor Grenade</li>
+                    <li>Ruinous Effigy Exotic Trace Rifle (Transmutation Sphere)</li>
+                    <li>Wavesplitter Exotic Trace Rifle</li>
+                    <li>Tractor Cannon Exotic Shotgun</li>
+                    <li>Two-Tailed Fox Exotic Rocket Launcher</li>
+                    <li>Collective Obligation Exotic Pulse Rifle (Void Leech with Suppression)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Freezing Singularity Prismatic Grenade</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Shadowshot: Deadfall and Shadowshot: Moebius Quiver Super Abilities</li>
+                    <li>The Bombardiers Exotic Boots</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Shield Bash Melee Ability</li>
+                </ul>
+            </div>
+
+            <!--Volatile Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/volatile.png">Volatile</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is afflicted with unstable <img class="icon-small" src="icons/void/icon_void.png">Void energy and will explode upon taking additional damage. Volatile Rounds from your Void weapons pierce the shields of Barrier Champions and stun them.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Targets afflicted with Volatile will trigger an explosion after receiving 190 base damage (200 in PvP), or upon being defeated, dealing up to 160 (80 in PvP) base damage in an approximately 7 meter radius. Volatile will persist until the explosion is triggered or it harmlessly expires from the target. There is a 1 second internal cooldown between when an enemy incurs a Volatile explosion and when the same enemy can be afflicted with Volatile again.</p>
+                <p class="desc">Gaining Volatile Rounds through any source allows your Void Weapons to apply Volatile on hit and also pierce the shields of Barrier Champions.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Cessation Void Fragment </li>
+                    <li>Echo of Instability Void Fragment (Volatile Rounds)</li>
+                    <li>Facet of Defiance Prismatic Fragment</li>
+                    <li>Facet of Bravery Prismatic Fragment (Volatile Rounds)</li>
+                    <li>Fighting Lion Exotic Grenade Launcher</li>
+                    <li>Deterministic Chaos Exotic Machine Gun</li>
+                    <li>Leviathan’s Breath Exotic Bow</li>
+                    <li>Collective Obligation Exotic Pulse Rifle (Void Leech with Volatile)</li>
+                    <li>Destabilizing Rounds Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Chaos Accelerant Void Aspect (Magnetic Grenade)</li>
+                    <li>Pocket Singularity Melee Ability</li>
+                    <li>Nova Warp Super Ability</li>
+                    <li>Astrocyte Verse Exotic Helmet</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Shadowshot: Moebius Quiver Super Ability</li>
+                    <li>Gyrfalcon’s Hauberk Exotic Chestplate (Volatile Rounds, applies to Spirit of the Gyrfalcon on Relativism)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Controlled Demolition Void Aspect</li>
+                </ul>
+            </div>
+
+            <!--Weaken Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/weaken.png">Weaken</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target takes increased damage and has their movement speed slowed. Afflicted combatants have difficulty firing accurately.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">The majority of Weaken effects cause enemy targets to receive 15% (7.5% in PvP) increased damage and suffer 20% reduced movement speed. Combatants’ weapon fire becomes less accurate.</p>
+                <p class="desc">Some Weaken sources apply a stronger Weaken effect, which will be noted next to their source.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Undermining Void Fragment</li>
+                    <li>Facet of Dominance Prismatic Fragment</li>
+                    <li>Buried Bloodline Exotic Sidearm</li>
+                    <li>Tessellation Exotic Fusion Rifle (Void Grenade)</li>
+                    <li>Deterministic Chaos Exotic Machine Gun</li>
+                    <li>Heartshadow Exotic Sword</li>
+                    <li>Tractor Cannon Exotic Shotgun (30% Weaken)</li>
+                    <li>Collective Obligation Exotic Pulse Rifle (Void Leech with Weaken)</li>
+                    <li>Flash Counter and Withering Gaze Weapon Perks</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Child of the Old Gods Void Aspect</li>
+                    <li>Chromatic Fire Exotic Robes</li>
+                    <li>Felwinter’s Helm Exotic Helmet (30% Weaken)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Snare Bomb Melee Ability</li>
+                    <li>Shadowshot: Deadfall and Shadowshot: Moebius Quiver Super Abilities (30% Weaken)</li>
+                    <li>Spectral Blades Super Ability</li>
+                    <li>Trapper’s Ambush and Stylish Executioner Void Aspects</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Twilight Arsenal Super Ability</li>
+                    <li>Second Chance Exotic Gauntlets</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Other</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Void Breach Verb-->
+            <button class="collapsible" style="background-color:rgb(209, 190, 230);"><img class="icon" src="icons/void/voidbreach.png">Void Breach</button>
+            <div class="collcontent" style="background-color:rgb(209, 190, 230);">
+                <h4 class="d2header4">Classification: Elemental Pickup</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A dimensional rupture teeming with <img class="icon-small" src="icons/void/icon_void.png">Void energy. When picked up, Void Breaches grant class ability energy.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Void Breaches hover at the point of creation until the player collects them or their duration expires. On pickup, Void Breaches grant 12.5% Class Ability energy and have a 5 second cooldown between creations. Void Breaches persist for 25 seconds before disappearing.</p>
+                <p class="desc">Void Breaches are unique to the player that created them and are not shared between allies.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Echo of Cessation, Echo of Domineering, and Echo of Harvest Void Fragments</li>
+                    <li>Facet of Awakening and Facet of Command Prismatic Fragments</li>
+                    <li>Synergy Weapon Mod</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+            <br>
+
+        </div>
+
+        <!--Stasis element tab-->
+        <div id="Stasis" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/stasis/banner_stasis.png">
+                <h4 class="entry"><img class="icon" src="icons/stasis/icon_stasis.png">Stasis specializes in freezing the enemy in their tracks and shattering them for strong, consistent AoE damage.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Buffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Frost Armor Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/frostarmor.png">Frost Armor</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">You are fortified by layers of durable <img class="icon-small" src="icons/stasis/icon_stasis.png">Stasis matter, reducing incoming damage. Frost Armor damage resistance grows stronger as you gain additional stacks.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Frost Armor is a stackable buff that grants 4.5% (2% in PvP) damage resistance per stack, up to 5 stacks at base for a total of 22.5% (10%) damage resistance. Frost Armor has a default duration of 9 seconds, refreshes upon getting a new stack, and completely falls off after the timer expires.</p>
+                <p class="desc">The Stasis Fragment Whisper of Rime increases the maximum stack count to 8 and maximum duration to 13 seconds, for a total of 36% (16%) damage resistance at maximum stacks.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Whisper of Fractures Stasis Fragment</li>
+                    <li>Facet of Purpose Prismatic Fragment</li>
+                    <li>Rimestealer Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Glacial Harvest Stasis Aspect</li>
+                    <li>Ballidorse Wrathweavers Exotic Gauntlets</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Grim Harvest Stasis Aspect</li>
+                    <li>Renewal Grasps Exotic Gauntlets (applies to Spirit of Renewal on Relativism)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Tectonic Harvest and Diamond Lance Stasis Aspects</li>
+                    <li>Icefall Mantle Exotic Gauntlets</li>
+                    <li>Blastwave Striders Exotic Boots</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Debuffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Slow Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/slow.png">Slow</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target has slowed movement and ability regeneration; their weapon performance is reduced. Slowed combatants have difficulty firing accurately and Overload Champions are stunned. After accumulating enough Slow stacks, the target is frozen.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Similar to Scorch, Slow incurs penalties that grow stronger as more stacks are accumulated, up to a maximum of 100 Slow stacks at which point the target is inflicted with Freeze.</p>
+                <p class="desc">Slowed combatants incur an approximate 40% movement speed penalty alongside lower accuracy with their weapons. Slowed enemy players incur an approximate 40% movement speed penalty, 60% reduced jump height, cannot use movement abilities, receive additional flinch from attacks, and incur a 75% penalty to Weapon Stability, Handling, Reload Speed, and Recoil Direction.</p>
+                <p class="desc">Upon receiving any amount of Slow stacks, Overload Champions become stunned.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Stasis Crystal formation - PvP, 15x Slow</li>
+                    <li>Coldsnap Grenade - Direct impact, 50x Slow</li>
+                    <li>Duskfield Grenade - 20x (10x) Slow on creation, 10x (5x) Slow every 0.35 seconds over time</li>
+                    <li>Whisper of Reversal Stasis Fragment - 10x Slow</li>
+                    <li>Facet of Defiance Prismatic Fragment - ? Slow</li>
+                    <li>Ager’s Scepter Exotic Trace Rifle - 100x (50x) Slow on final blow burst, 20x per hit when overcharged</li>
+                    <li>Wicked Implement Exotic Scout Rifle - 40x (20x) Slow per hit</li>
+                    <li>Tessellation Exotic Fusion Rifle - ? slow with Stasis Grenade</li>
+                    <li>Winterbite Exotic Glaive - x40 Slow on melee</li>
+                    <li>Chill Clip and Cold Steel Weapon Perks</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Bleak Watcher - 20x (10x) Slow per projectile, 5 projectiles per burst</li>
+                    <li>Freezing Singularity Prismatic Grenade - approx. 13x Slow every 0.25 seconds</li>
+                    <li>Chromatic Fire Exotic Chest Armor - 30x Slow</li>
+                    <li>Rime-Coat Raiment Exotic Chest Armor - 50x Slow per icicle</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Withering Blade Melee Ability (60x (40x) Slow)</li>
+                    <li>Silence and Squall Super Ability - Stasis Storm, 20x slow every 0.1 seconds</li>
+                    <li>Winter’s Shroud Stasis Aspect - 60x (40x) Slow</li>
+                    <li>Hailfire Spike Prismatic Grenade - approx. 13x Slow every 0.25 seconds</li>
+                    <li>The Bombardiers Exotic Boots - 40x (20x) Slow</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Shiver Strike Melee Ability - 50x (40x) Slow</li>
+                </ul>
+            </div>
+
+            <!--Freeze Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/freeze.png">Freeze</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is trapped in <img class="icon-small" src="icons/stasis/icon_stasis.png">Stasis matter and is unable to move. After taking additional damage while frozen, the target shatters.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Frozen enemies are completely unable to shoot, use abilities, or move. While Frozen, all enemies receive 10% increased Special/Heavy Weapon damage, 5% increased Light Ability damage, and 5% (50%) reduced Primary Weapon damage. Tier 1 and 2 combatants as well as enemy players receive 120% increased Basic Melee Attack damage while Frozen.</p>
+                <p class="desc">Frozen enemies will Shatter after receiving varying damage in PvE and 200 damage in PvP.</p>
+                <p class="desc">Non-boss combatants will remain frozen for 6 seconds. Boss combatants are not immobilized while Frozen, and automatically Shatter after 3 seconds. Enemy players are Frozen for either 1.35 (Brief Freeze) or 4.75 seconds (Prolonged Freeze), depending on if the source of the Freeze is a non-Super or Super Ability respectively. While a player is Frozen, their Class Ability is replaced by a Breakout ability, which can prematurely free the player from being Frozen at the cost of some amount of Health. </p>
+                <p class="desc">Roaming Supers are briefly Frozen before automatically breaking out, while One-off Supers are deactivated completely.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>100x Slow from any source</li>
+                    <li>Stasis Crystal formation (combatants)</li>
+                    <li>Winterbite Exotic Glaive</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Frostpulse and Iceflare Bolts Stasis Aspects</li>
+                    <li>Penumbral Blast Melee Ability</li>
+                    <li>Winter’s Wrath Super Ability</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Silence and Squall Super Ability (Silence)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Glacial Quake Super Ability (On cast and heavy attack)</li>
+                    <li>Diamond Lance and Howl of the Storm Stasis Aspects</li>
+                </ul>
+            </div>
+
+            <!--Shatter Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/shatter.png">Shatter</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Debuff / Damage</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">When a frozen target is shattered, they take damage and deal damage to nearby targets. Shatter damage will stun Unstoppable Champions.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">The Shatter damage effect can be accessed by either damaging a Frozen target sufficiently, or through various instant-Shatter Abilities. When Shattered, up to 400 base damage is dealt around the origin of the Shatter.</p>
+                <p class="desc">Unstoppable Champions are stunned upon receiving Shatter damage from any source.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Damaging a Frozen target</li>
+                    <li>Salvation’s Grip Exotic Grenade Launcher (uncharged)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Winter’s Wrath Super Ability</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Shatterdive Stasis Aspect</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Shiver Strike Melee Ability</li>
+                    <li>Cryoclam and Diamond Lance Stasis Aspects</li>
+                    <li>Consecration Solar Aspect (Shatters Stasis crystals)</li>
+                </ul>
+            </div>
+
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Other</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Stasis Crystal Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/stasiscrystal.png">Stasis Crystal</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Construct</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A crystal of solidified <img class="icon-small" src="icons/stasis/icon_stasis.png">Stasis matter. Upon creation, freezes nearby combatants and slows nearby players. Crystals can be destroyed, dealing damage in an area.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Stasis Crystals take the form of solid pillars at the point of creation, with varying amounts of health depending on size. Stasis Crystals will crumble after 15 seconds, dealing no damage.</p>
+                <p class="desc">Upon creation, nearby combatants are inflicted with Freeze and nearby enemy players are afflicted with 15 stacks of Slow. Upon sufficiently damaging a Stasis Crystal, it will be destroyed, dealing up to 175 (25 in PvP) damage over an 8 meter radius.</p>
+                <p class="desc">Players will deal double damage to their own Stasis Crystals.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Glacier Grenade</li>
+                    <li>Verglas Curve Exotic Bow</li>
+                    <li>Salvation’s Grip Exotic Grenade Launcher</li>
+                    <li>Headstone Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Rime-Coat Raiment Exotic Chest Armor</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Touch of Winter Stasis Aspect (all grenades)</li>
+                    <li>Mask of Fealty Exotic Helmet</li>
+                    <li>Renewal Grasps Exotic Gauntlets (Duskfield Grenade)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Glacial Quake Super Ability</li>
+                    <li>Howl of the Storm Stasis Aspect</li>
+                    <li>Blastwave Striders Exotic Boots</li>
+                    <li>Cadmus Ridge Lancecap Exotic Helmet</li>
+                    <li>Hoarfrost-Z Exotic Chestplate (applies to Spirit of Hoarfrost on Stoicism)</li>
+                </ul>
+            </div>
+
+            <!--Stasis Shard Verb-->
+            <button class="collapsible" style="background-color:rgb(181, 192, 218);"><img class="icon" src="icons/stasis/stasisshard.png">Stasis Shard</button>
+            <div class="collcontent" style="background-color:rgb(181, 192, 218);">
+                <h4 class="d2header4">Classification: Elemental Pickup</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A small shard of <img class="icon-small" src="icons/stasis/icon_stasis.png">Stasis matter that can be collected to restore melee energy.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Stasis Shards hover at the point of creation until the player collects them or their duration expires. There are two types of Stasis Shards that can be created: small and large. Small Stasis Shards grant 10% Melee energy, and Large Stasis Shards grant 50% Melee energy. All Stasis Shards will persist for 20 seconds before expiring.</p>
+                <p class="desc">While Glacial, Grim, or Tectonic Harvest Stasis Aspects are equipped, Small Stasis Shards grant a 10 HP heal alongside one stack of Frost Armor, and Large Stasis Shards restore a greater amount of HP alongside three stacks of Frost Armor.</p>
+                <p class="desc">A copy of each Stasis Shard is created for all allies, allowing each player to collect them.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Whisper of Chains and Whisper of Chill Stasis Fragments (Small)</li>
+                    <li>Facet of Command and Facet of Awakening Prismatic Fragments (Small)</li>
+                    <li>Wicked Implement Exotic Scout Rifle (Small)</li>
+                    <li>Synergy Weapon Mod (Small)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Glacial Harvest Stasis Aspect (Small)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Grim Harvest Stasis Aspect (Small from tier 1, large from tier 2+)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Tectonic harvest Stasis Aspect (Small)</li>
+                </ul>
+            </div>
+            <br>
+
+        </div>
+
+        <!--Strand element tab-->
+        <div id="Strand" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/strand/banner_strand.png">
+                <h4 class="entry"><img class="icon" src="icons/strand/icon_strand.png">Strand specializes in disrupting the enemy and mitigating their combat effectiveness, while maintaining high mobility, consistent damage output, and strong defensive utility.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Buffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Woven Mail Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/wovenmail.png">Woven Mail</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Buff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">Your body is encased in a protective mesh of tightly woven <img class="icon-small" src="icons/strand/icon_strand.png">Strand matter, greatly reducing any incoming non-precision damage.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">While Woven Mail is active, the player receives 45% (25% in PvP) damage resistance. Different sources of Woven Mail have varying durations.</p>
+                <p class="desc">Precision damage and melee attacks from enemy players bypass the damage resistance.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Thread of Warding Strand Fragment</li>
+                    <li>Facet of Purpose Prismatic Fragment</li>
+                    <li>The Navigator Exotic Trace Rifle</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Cyrtarachne’s Facade Exotic Helmet (applies to Spirit of the Cyrtarachne on Relativism)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Into the Fray Strand Aspect</li>
+                    <li>Abeyant Leap Exotic Boots</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Debuffs</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Suspend Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/suspend.png">Suspend</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is immobilized by a web of <img class="icon-small" src="icons/strand/icon_strand.png">Strand matter, lifting them into the air. While suspended, Guardians are unable to move freely, combatants are unable to move or fire their weapon, and Unstoppable Champions are stunned. Suspended targets unwind into a Tangle when defeated.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Suspended targets are forced into the air and unable to use abilities.</p>
+                <p class="desc">Suspended combatants cannot move, shoot, or use abilities. Tier 1 and 2 combatants are suspended for 5 seconds. Minibosses are suspended for 3 seconds. Bosses are immune to suspension, instead receiving a spike of 300 base damage after a 3 seconds of being Suspended.</p>
+                <p class="desc">Suspended enemy players are lifted into the air, forced into third-person, and have the ability to slowly hover and hip fire weapons for 2 seconds.</p>
+                <p class="desc">When Suspended, Unstoppable Champions become stunned.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Shackle Grenade</li>
+                    <li>Thread of Binding Strand Fragment</li>
+                    <li>Wish-Keeper Exotic Bow</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Mindspun Invocation (Shackle Grenade) and The Wanderer Strand Aspects</li>
+                    <li>Mataiodoxia Exotic Chest Armor</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Ensnaring Slam Strand Aspect</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Bladefury Super Ability (Heavy attack)</li>
+                    <li>Drengr’s Lash Strand Aspect</li>
+                    <li>Electrified Snare Prismatic Grenade</li>
+                </ul>
+            </div>
+
+            <!--Sever Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/sever.png">Sever</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target’s connections to the world around them are cut, and their outgoing damage is significantly reduced. Severed targets unwind into a Tangle when defeated.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">While afflicted with Sever, the target deals 40% (15%) less damage for 10 (5) seconds.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Thread of Isolation Strand Fragment</li>
+                    <li>Facet of Solitude and Facet of Defiance Prismatic Fragments</li>
+                    <li>The Navigator Exotic Trace Rifle</li>
+                    <li>Tessellation Exotic Fusion Rifle (Strand Grenade)</li>
+                    <li>Slice Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Chromatic Fire Exotic Chest Armor</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Threaded Spike Melee Ability</li>
+                    <li>The Bombardiers Exotic Boots</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Frenzied Blade Melee Ability</li>
+                </ul>
+            </div>
+
+            <!--Unravel Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/unravel.png">Unravel</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Debuff</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">The target is permeated with destructive <img class="icon-small" src="icons/strand/icon_strand.png">Strand matter. As they take additional damage, they create unraveled projectiles that seek out nearby targets. Unraveling Rounds from your Strand weapons pierce the shields of Barrier Champions and stun them. Unraveled targets unwind into a Tangle when defeated.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">Targets afflicted with Unravel release three seeking threads towards nearby enemies 0.25 seconds after receiving at least 40 base damage. Each thread deals 29 (4) base damage and applies Unravel, causing this debuff to easily propagate across groups of enemies. Unravel incurs a 1.2 second internal cooldown on creating additional threads.</p>
+                <p class="desc">Thread hits will apply or refresh the duration of Unravel to the target enemy, up to its original duration.</p>
+                <p class="desc">Gaining Unraveling Rounds through any source allows your Strand Weapons to apply Unravel on hit and also pierce the shields of Barrier Champions.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Grapple Melee</li>
+                    <li>Thread of Propagation Strand Fragment (Unraveling Rounds)</li>
+                    <li>Facet of Bravery Prismatic Fragment (Unraveling Rounds)</li>
+                    <li>Final Warning Exotic Sidearm</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Arcane Needle Melee Ability</li>
+                    <li>Swarmers Exotic Boots (Threadlings)</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Whirling Maelstrom Strand Aspect</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>Flechette Storm Strand Aspect</li>
+                </ul>
+            </div>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Other</h3>
+                <hr class="divider">
+            </div>
+
+            <!--Tangle Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/tangle.png">Tangle</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Elemental Pickup</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A knot of <img class="icon-small" src="icons/strand/icon_strand.png">Strand matter, swirling with potential. Tangles can be shot and destroyed, or picked up and thrown, dealing damage. Defeating targets afflicted with any Strand debuff will unwind them and create a Tangle.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">When any enemy is defeated while afflicted with any Strand debuff (Suspend, Sever, or Unravel), a Tangle is created on their position. Strand Tangles incur a 12 second cooldown upon creation and persist for up to 20 seconds or until picked up or destroyed.</p>
+                <p class="desc">Upon detonating a Tangle through damaging it or throwing it, an explosion is created that deals 385 (100) base damage in an approximate 5 meter radius.</p>
+                <p class="desc">Grappling to a Tangle fully refunds a Grenade charge, allowing players to Grapple to Tangles for free.</p>
+                <p class="desc">Some abilities create a unique Grapple Tangle, which allows free Grappling similarly to a regular Tangle, but cannot be picked up or destroyed. Grapple Tangles persist for up to 17.5 seconds, refreshing by 5 seconds upon being Grappled to by any player. This duration refresh is reduced to 1 second after 5 consecutive grapples.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Defeating any Strand-debuffed target</li>
+                    <li>Thread of Transmutation Strand Fragment</li>
+                    <li>Facet of Awakening Prismatic Fragment</li>
+                    <li>Quicksilver Storm Exotic Auto Rifle</li>
+                    <li>The Navigator Exotic Trace Rifle (Grapple Tangle)</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Widow’s Silk Strand Aspect (Grapple Tangle)</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+
+            <!--Threadling Verb-->
+            <button class="collapsible" style="background-color:rgb(191, 219, 204);"><img class="icon" src="icons/strand/threadling.png">Threadling</button>
+            <div class="collcontent" style="background-color:rgb(191, 219, 204);">
+                <h4 class="d2header4">Classification: Summon</h4>
+
+                <h4 class="d2header4">Description</h4>
+                <p class="desc">A creature woven from pure <img class="icon-small" src="icons/strand/icon_strand.png">Strand matter that seeks out nearby targets and attacks, dealing damage.</p>
+
+                <h4 class="d2header4">Breakdown</h4>
+                <p class="desc">A Threadling takes the appearance of a bug-like creature that travels independently along the ground, seeking enemies within approximately 20 meters. Upon being close enough to an enemy, the Threadling will leap at them and explode, dealing 338 (35) base damage in a small radius.</p>
+                <p class="desc">Warlocks gain the ability to possess Perched Threadlings. If Threadlings travel for approximately 14 meters without finding a target, they will return to the Warlock and perch until the player deals weapon damage or scores a melee hit, at which point Perched Threadlings will release one at a time to chase the target. The player may hold up to 5 Perched Threadlings at once, and Perched Threadlings will track the attacked enemy upon being released regardless of distance.</p>
+                <p class="desc">Threadlings count as damage from their source of creation (i.e. Weapon damage from Hatchling), but lose this inheritance upon Perching.</p>
+                
+                <h4 class="d2header4">Sources</h4>
+                <h5 class="d2header4">Universal</h5>
+                <ul>
+                    <li>Threadling Grenade</li>
+                    <li>Thread of Finality and Thread of Rebirth Strand Aspects</li>
+                    <li>Euphony Exotic Linear Fusion Rifle</li>
+                    <li>Hatchling Weapon Perk</li>
+                </ul>
+                <h5 class="d2header4">Warlock</h5>
+                <ul>
+                    <li>Mindspun Invocation Strand Aspect (Threadling Grenade consumption or Grapple Melee hit)</li>
+                    <li>Weaver’s Call and Weavewalk Strand Aspects</li>
+                    <li>Needlestorm Super Ability</li>
+                    <li>Swarmers Exotic Boots</li>
+                </ul>
+                <h5 class="d2header4">Hunter</h5>
+                <ul>
+                    <li>Threaded Specter Strand Aspect</li>
+                </ul>
+                <h5 class="d2header4">Titan</h5>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+
+        <!--Prismatic element tab-->
+        <div id="Prismatic" class="tab-content">
+            <header class="tab-header">
+                <img class="tab-banner" src="icons/prism/banner_prism.png">
+                <h4 class="entry"><img class="icon" src="icons/prism/icon_prism.png">Prismatic allows you to combine all the strengths of each element into one, powerful subclass.</h4>
+            </header>
+
+            <div class="column-heading">
+                <h3 class="column-indicator">Utility</h3>
+                <hr class="divider">
+            </div>
+
+        <!--Transcendence Verb-->
+        <button class="collapsible" style="background-color:rgb(233, 193, 214);"><img class="icon" src="icons/prism/transcendence.png">Transcendence</button>
+        <div class="collcontent" style="background-color:rgb(233, 193, 214);">
+            <h4 class="d2header4">Classification: Utility Ability</h4>
+
+            <h4 class="d2header4">Description</h4>
+            <p class="desc">Achieve harmony by dealing damage with Light and Dark damage types in equal measure or by applying subclass buffs to your allies. Kinetic damage generates both Light and Dark energy. While Transcendence is active, your grenade is replaced by a unique Prismatic grenade that deals both Light and Dark damage. Dealing melee damage while transcendent greatly increases your grenade energy regeneration, and vice versa. Defeating targets while transcendent extends its duration.</p>
+
+            <h4 class="d2header4">Breakdown</h4>
+            <p class="desc">While any Prismatic Subclass is equipped, the player gains two additional bars above their Super Ability which track Light and Dark energy. These bars charge independently of each other, and allow access to Transcendence when both are full.</p>
+            <p class="desc">Dealing Elemental damage and applying Elemental buffs and debuffs grants Transcendence energy for the corresponding bar. Kinetic Damage charges both Light and Darkness bars at 50% efficiency, and overkill damage does not count for charging Transcendence bars.</p>
+            <p class="desc">Upon filling both bars, Transcendence can be cast. On cast, Transcendence immediately refills up to 2 charges of Grenade and Melee Abilities. The Grenade Ability is replaced with a unique Prismatic Grenade with both Light and Dark damage capabilities.</p>
+            <ul>
+                <li>Warlock: Freezing Singularity (Void/Suppress + Stasis/Slow)</li>
+                <li>Hunter: Hailfire Spike (Solar/Scorch + Stasis/Slow)</li>
+                <li>Titan: Electrified Snare (Arc/Jolt + Strand/Suspend)</li>
+            </ul>
+            <p class="desc">While Transcendent, the player receives a 5% Weapon damage boost, 10% Grenade and Melee Regeneration speed, and 20% damage resistance for 20 seconds. Dealing Grenade Ability damage increases Melee Ability Regeneration speed to a flat 35% ability energy per second for 2 seconds, refreshing with additional damage. This same benefit applies the other way around with Melee Ability damage for Grenade Ability Regeneration speed.</p>
+            <p class="desc">Obtaining final blows while Transcendent extends its duration, with diminishing returns on subsequent final blows until Transcendence expires. Both Light and Dark bars are completely reset once Transcendence expires.</p>
+        </div>
+        <br>
+
+        </div>
+
+
+
+
+        <!--Script for collapsibles, from the rolls page-->
+        <script>
+            var collaps = document.getElementsByClassName("collapsible");
+            let i;
+
+            for(i = 0; i < collaps.length; i++){
+                collaps[i].addEventListener("click", function(){
+                    this.classList.toggle("active");
+
+                    var content = this.nextElementSibling;
+                    if(content.style.display === "block"){
+                        content.style.display = "none";
+                    }
+                    else{
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
